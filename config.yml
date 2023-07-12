@@ -1,0 +1,27 @@
+img_path: 'test_data/origin/40854.png'
+
+# model path
+S2M: "SketchHairSalon/checkpoints/S2M/200_net_G.pth"
+S2I: "SketchHairSalon/checkpoints/S2I_unbraid/200_net_G.pth"
+e4e: "HairMapper/ckpts/e4e_ffhq_encode.pt"
+
+data_dir: "test_data"
+
+alpha: 0.25
+thickness: 2
+sketch_background_color: 127
+delay: 0.25
+
+device: cuda
+
+# for hair mapper
+learning_rate: 0.01
+num_iterations: 100
+loss_weight_feat: 3e-5
+loss_weight_id: 1.0
+remain_ear: False
+diffuse: False
+
+dilate_kernel_size: 50
+blur_kernel_size: 30
+truncation_psi: 0.75
